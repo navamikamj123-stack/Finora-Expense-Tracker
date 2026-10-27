@@ -1,0 +1,584 @@
+
+/* ==========================================
+   FINORA | PREMIUM MINIMAL DESIGN
+   Elegant ivory, mocha and muted bronze
+   No decorative animations
+   ========================================== */
+
+/* 1. GLOBAL RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f6f2ec;
+  color: #403329;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #9a795b;
+  outline-offset: 3px;
+}
+
+/* 2. MAIN LAYOUT */
+
+.page {
+  width: min(1060px, calc(100% - 64px));
+  max-width: 1060px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 42px 0 24px;
+}
+
+/* 3. BRAND HEADER */
+
+.header {
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: left;
+}
+
+.brand-label {
+  margin: 0 0 8px;
+  color: #987755;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+
+.header h1.brand-title {
+  margin: 0;
+  padding: 0;
+  color: #463326;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 5vw, 58px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  text-align: left;
+}
+
+.brand-title span {
+  color: #a7835f;
+}
+
+.header p {
+  margin: 9px 0 0;
+  color: #827466;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* 4. TOTAL SPENDING CARD */
+
+.total-card {
+  position: relative;
+  width: 100%;
+  min-height: 176px;
+  margin: 0 0 25px;
+  padding: 28px 32px;
+  overflow: hidden;
+  border: 1px solid #806247;
+  border-radius: 13px;
+  background: #806247;
+  color: #fffaf3;
+  box-shadow: none;
+  text-align: left;
+}
+
+.total-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #c1a27e;
+}
+
+.total-card::after {
+  content: none;
+}
+
+.total-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 10px;
+  color: #e9ddcf;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.total-card h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #fffaf3;
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+  overflow-wrap: anywhere;
+}
+
+/* 5. CONTENT CARDS */
+
+.card {
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 28px;
+  border: 1px solid #e5dbcf;
+  border-radius: 12px;
+  background: #fffdf9;
+  box-shadow: 0 2px 8px rgba(68, 48, 31, 0.025);
+  text-align: left;
+}
+
+.card > h2 {
+  margin: 0 0 24px;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #eee5da;
+  color: #463326;
+  font-size: 19px;
+  font-weight: 650;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
+/* 6. FORM ALIGNMENT */
+
+.form-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px 24px;
+  align-items: start;
+}
+
+.field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  text-align: left;
+}
+
+.field label {
+  display: block;
+  margin: 0;
+  color: #5d4937;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.field input,
+.field select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 46px;
+  margin: 0;
+  padding: 0 13px;
+  border: 1px solid #ded3c6;
+  border-radius: 6px;
+  background: #fffefa;
+  color: #403329;
+  font-size: 13px;
+  text-align: left;
+  box-shadow: none;
+}
+
+.field input::placeholder {
+  color: #a29688;
+  opacity: 1;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #9a795b;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(154, 121, 91, 0.10);
+}
+
+/* 7. FORM BUTTONS */
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0 0;
+}
+
+.form-actions button {
+  display: inline-flex;
+  min-height: 43px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 21px;
+  border: 1px solid #795a40;
+  border-radius: 6px;
+  background: #795a40;
+  color: #fffdf9;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: none;
+}
+
+.form-actions button:hover:not(:disabled) {
+  background: #62452f;
+}
+
+.form-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-actions .cancel-button {
+  border-color: #ded2c4;
+  background: #f4eee5;
+  color: #594633;
+}
+
+.form-actions .cancel-button:hover {
+  background: #eae0d3;
+}
+
+/* 8. STATUS MESSAGES */
+
+.message {
+  margin: 18px 0 0;
+  padding: 11px 13px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.success {
+  border-color: #cdddc9;
+  background: #f0f5ed;
+  color: #426343;
+}
+
+.failure {
+  border-color: #e8d0c8;
+  background: #fbf0ec;
+  color: #963e32;
+}
+
+/* 9. EXPENSE HISTORY TABLE */
+
+.table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e6dbcf;
+  border-radius: 8px;
+  background: #fffdf9;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: transparent;
+  text-align: left;
+}
+
+thead {
+  background: #f4eee5;
+}
+
+th {
+  padding: 15px 16px;
+  color: #74583e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+td {
+  padding: 15px 16px;
+  border-top: 1px solid #eee6dc;
+  color: #4b3a2d;
+  font-size: 13px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+tbody tr {
+  background: #fffdf9;
+}
+
+tbody tr:hover {
+  background: #faf7f1;
+}
+
+tbody td:first-child {
+  color: #433328;
+  font-weight: 600;
+}
+
+/* 10. TABLE ACTIONS */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.action-buttons button {
+  display: inline-flex;
+  min-height: 31px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 11px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit-button {
+  border-color: #e2d1bb !important;
+  background: #f5ebde;
+  color: #74502e;
+}
+
+.edit-button:hover {
+  background: #e9d8c2;
+}
+
+.delete-button {
+  border-color: #ead1ca !important;
+  background: #faf0ed;
+  color: #98483c;
+}
+
+.delete-button:hover {
+  background: #f2dfd9;
+}
+
+/* 11. EMPTY STATE */
+
+.empty {
+  margin: 0;
+  padding: 27px 16px;
+  border: 1px dashed #dfd3c4;
+  border-radius: 7px;
+  background: #fcf9f4;
+  color: #877765;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* 12. FOOTER */
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 12px 0 5px;
+  color: #8c7c6b;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+footer strong {
+  color: #6d5038;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+footer p {
+  margin: 2px 0 0;
+  color: #968574;
+  font-size: 11px;
+}
+
+/* 13. TABLET */
+
+@media (max-width: 768px) {
+  .page {
+    width: calc(100% - 40px);
+    padding-top: 32px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .total-card {
+    min-height: 160px;
+    padding: 25px;
+  }
+
+  .form-grid {
+    gap: 19px;
+  }
+
+  th,
+  td {
+    padding: 13px;
+  }
+}
+
+/* 14. MOBILE */
+
+@media (max-width: 520px) {
+  .page {
+    width: calc(100% - 28px);
+    padding: 24px 0 20px;
+  }
+
+  .header {
+    margin-bottom: 23px;
+  }
+
+  .brand-label {
+    margin-bottom: 7px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .header h1.brand-title {
+    font-size: clamp(40px, 11vw, 50px);
+    letter-spacing: -1.5px;
+  }
+
+  .header p {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+
+  .total-card {
+    min-height: 145px;
+    margin-bottom: 19px;
+    padding: 22px 19px;
+    border-radius: 10px;
+  }
+
+  .total-card h2 {
+    font-size: clamp(29px, 8.5vw, 36px);
+  }
+
+  .card {
+    margin-bottom: 19px;
+    padding: 20px 16px;
+    border-radius: 9px;
+  }
+
+  .card > h2 {
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+    font-size: 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .field input,
+  .field select {
+    height: 45px;
+  }
+
+  .form-actions {
+    margin-top: 21px;
+  }
+
+  .form-actions button {
+    min-height: 42px;
+    padding: 9px 16px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .empty {
+    padding: 22px 12px;
+  }
+
+  footer {
+    padding-top: 8px;
+  }
+}
+
+/* 15. EXTRA SMALL SCREENS */
+
+@media (max-width: 360px) {
+  .page {
+    width: calc(100% - 22px);
+  }
+
+  .brand-label {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .header h1.brand-title {
+    font-size: 39px;
+  }
+
+  .card {
+    padding: 17px 12px;
+  }
+
+  .total-card {
+    padding: 20px 15px;
+  }
+}
